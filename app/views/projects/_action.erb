@@ -1,0 +1,8 @@
+<% form_remote_tag :url => '/actions/create', :html => {:id => 'action_form'} do -%>
+    <div>
+        action name: 
+        <%= hidden_field_tag 'hoho[project_id]', @project.id %>
+        <%= text_field_tag 'hoho[name]' %>
+        <%= submit_tag 'ding!' %>
+    </div>
+<% end -%>

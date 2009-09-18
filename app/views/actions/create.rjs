@@ -1,0 +1,2 @@
+page[:new_action].toggleClassName('pleasehide')
+page << "Form.reset('action_form')"
