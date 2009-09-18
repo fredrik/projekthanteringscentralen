@@ -1,0 +1,14 @@
+<div id='header'>
+    <h1>projektplanering much?</h1>
+    <h2><%= link_to '+', new_project_path %></h2>
+</div>
+
+<div id='projects-list'>
+    <% @projects.each do |project| %>
+        <div><%= link_to h(project.name), project %></div>
+        <% end %>
+</div>
+
+</div id='footer'>
+    
+</div>
