@@ -1,2 +1,5 @@
-page[:new_action].toggleClassName('pleasehide')
 page << "Form.reset('action_form')"
+page.replace_html :attach_action_status, "action attached."
+page.replace_html :actions_list, :partial => 'list', :object => @project
+page[:actions_list_more].toggleClassName('no_display')
+page[:attach_action].toggleClassName('pleasehide')

@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   has_one :next_action, :class_name => 'Action', :order => 'priority'
-  has_many :actions, :order => 'priority'
+  has_many :actions, :order => 'priority' # TODO: cascading delete.
 
   validates_presence_of :name, :name_normalized
   validates_uniqueness_of :name_normalized # name_normalized is the key.

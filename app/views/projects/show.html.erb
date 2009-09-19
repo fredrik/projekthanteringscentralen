@@ -5,31 +5,11 @@
   <%=h @project.description %>
 </p>
 
-<div id='actions'>
-    <% if @project.next_action -%>
-    <div>
-        <b>next action:</b>
-        <%= link_to h(@project.next_action.name), @project.next_action %>
-    </div>
-    <% end -%>
-
-    <% unless @project.more_actions.empty? -%>
-    <div>
-    <span>more actions:</span><br />
-    <% @project.more_actions.each do |action| -%>
-        <%= link_to h(action.name), action %><br/>
-    <% end -%>
-    </div>
-    <% end -%>
-
-    <div id='new_action' class='pleasehide'>
-        <%= render :partial => 'action', :locals => {:project => @project} %>
-    </div>
-
-</div>
+<%= render :partial => 'actions/list', :locals => {:project => @project} %>
+<%= render :partial => 'actions/create', :locals => {:project => @project} %>
 
 
-<%= link_to_function 'add action', "$('new_action').toggleClassName('pleasehide');"  %> |
+<%= link_to_function 'add action', "$('attach_action').toggleClassName('pleasehide'); $('attach_action_status').innerHTML='';"  %> |
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Obliterate', @project, :confirm => 'ya, rly?', :method => :delete %> |

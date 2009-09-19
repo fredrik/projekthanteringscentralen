@@ -1,0 +1,1 @@
+page.replace_html :attach_action_status, "could not attach action."

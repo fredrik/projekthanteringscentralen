@@ -1,0 +1,10 @@
+<div id='new_action'>
+<div id='attach_action_status'/></div>
+<div id='attach_action' class='pleasehide'>
+<% form_remote_tag :url => '/actions/create', :html => {:id => 'action_form'} do -%>
+    <%= hidden_field_tag 'aktion[project_id]', @project.id %>
+    <%= text_field_tag 'aktion[name]' %>
+    <%= submit_tag 'attach' %>
+<% end -%>
+</div>
+</div>

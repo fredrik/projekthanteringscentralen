@@ -10,17 +10,13 @@ class ActionsController < ApplicationController
   end
   
   def create
-    @action = Action.new(params[:hoho])
+    @action = Action.new(params[:aktion])
+    @project = @action.project
 
     if @action.save
-      respond_to do |killthedj|
-        killthedj.js
-      end
+      render :action => 'create.rjs'
     else
-      # fail.
-      respond_to do |accepts|
-        accepts.js
-      end
+      render :action => 'create_failed.rjs'
     end
   end
 

@@ -55,3 +55,20 @@ a:hover { color: #fff; background-color:#000; }
 .pleasehide {
     visibility: hidden;
 }
+
+.no_display {
+    display: none;
+}
+
+#actions_list_more {
+    margin-top: 10px;
+}
+
+#new_action {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#attach_action_status {
+    color: gray;
+}
