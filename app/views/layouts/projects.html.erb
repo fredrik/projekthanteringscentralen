@@ -4,16 +4,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Projects: <%= controller.action_name %></title>
+  <title>projekthanteringscentralen.</title>
   <%= stylesheet_link_tag 'scaffold' %>
   <%= javascript_include_tag 'prototype' %>
   
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+<div id='menu'>
+    <%= link_to 'projects', projects_path, :class => 'menu_link' %>
+</div>
 
-<%= yield %>
+<div id='portugal'>
+    <p><%= flash[:notice] %></p>
+    <%= yield %>
+</div>
 
 </body>
 </html>

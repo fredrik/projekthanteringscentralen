@@ -11,6 +11,5 @@
 
 <%= link_to_function 'add action', "$('attach_action').toggleClassName('pleasehide'); $('attach_action_status').innerHTML='';"  %> |
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Obliterate', @project, :confirm => 'ya, rly?', :method => :delete %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'edit', edit_project_path(@project) %> |
+<%= link_to 'rm -rf', @project, :confirm => 'ya, rly?', :method => :delete %>

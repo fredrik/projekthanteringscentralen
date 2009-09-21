@@ -1,4 +1,8 @@
-body { background-color: #fff; color: #333; }
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -15,6 +19,10 @@ pre {
 a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
+
+a.menu_link, a.menu_link:visited { color: white;}
+
+
 
 .fieldWithErrors {
   padding: 2px;
@@ -71,4 +79,14 @@ a:hover { color: #fff; background-color:#000; }
 
 #attach_action_status {
     color: gray;
+}
+
+#menu {
+    padding: 6px;
+    color: white;
+    background: black;
+}
+
+#portugal {
+    margin: 8px;
 }
