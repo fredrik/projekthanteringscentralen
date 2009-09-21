@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
-  has_one :next_action, :class_name => 'Action', :order => 'priority'
-  has_many :actions, :order => 'priority' # TODO: cascading delete.
+  has_one :next_action, :class_name => 'Action', :order => 'priority', :conditions => ['finished != ?', true]
+  has_many :actions, :order => 'priority', :conditions => ['finished != ?', true] # TODO: cascading delete.
 
   validates_presence_of :name, :name_normalized
   validates_uniqueness_of :name_normalized # name_normalized is the key.
@@ -14,10 +14,7 @@ class Project < ActiveRecord::Base
 
   # accessor for actions other than the next action.
   def more_actions
-    unless actions.empty?
-      return actions - [next_action]
-    else
-      return []
-    end
+    return [] if actions.empty?
+    return actions - [next_action]
   end
 end

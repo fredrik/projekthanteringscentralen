@@ -3,7 +3,7 @@
 <div id='attach_action' class='pleasehide'>
 <% form_remote_tag :url => '/actions/create', :html => {:id => 'action_form'} do -%>
     <%= hidden_field_tag 'aktion[project_id]', @project.id %>
-    <%= text_field_tag 'aktion[name]' %>
+    <%= text_field_tag 'aktion[name]', nil, :size => 40 %>
     <%= submit_tag 'attach' %>
 <% end -%>
 </div>

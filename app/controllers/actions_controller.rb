@@ -20,4 +20,15 @@ class ActionsController < ApplicationController
     end
   end
 
+  # suboptimal to have this as a GET.
+  def finish
+    @action = Action.find(params[:id])
+    unless @action.finished
+      @action.finished = true
+      @action.finished_at = Time.now
+      @action.save
+    end
+    redirect_to :action => 'show'
+  end
+
 end

@@ -4,3 +4,11 @@
 <blockquote>
 <%= @action.description %>
 </blockquote>
+
+<% if @action.finished -%>
+finished at <%= @action.finished_at %>
+<% else -%>
+<%= link_to 'finish.', finish_action_path(@action) %>
+<% end -%>
+
+delete.

@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :projects
-  map.resources :actions
+  map.resources :actions, :member => {:finish => :get}
 
   map.root :controller => 'projects'
 
