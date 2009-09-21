@@ -31,4 +31,17 @@ class ActionsController < ApplicationController
     redirect_to :action => 'show'
   end
 
+  # DELETE /projects/1
+  # DELETE /projects/1.xml
+  def destroy
+    @action = Action.find(params[:id])
+    project = @action.project
+    @action.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(project) }
+      format.xml  { head :ok }
+    end
+  end
+
 end

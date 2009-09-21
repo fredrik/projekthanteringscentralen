@@ -11,4 +11,5 @@ finished at <%= @action.finished_at %>
 <%= link_to 'finish.', finish_action_path(@action) %>
 <% end -%>
 
-delete.
+<%= link_to 'rm -rf', @action, :confirm => 'ya, rly?', :method => :delete %>
+
