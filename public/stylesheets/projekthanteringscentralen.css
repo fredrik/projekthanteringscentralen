@@ -43,3 +43,10 @@ a.menu_link, a.menu_link:visited { color: white;}
 #portugal {
     margin: 8px;
 }
+
+#show_action {
+    width: 350px;
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 4px;
+}

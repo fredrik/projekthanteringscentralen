@@ -1,0 +1,16 @@
+<span><b>action</b>: <%= @action.name %></span><br />
+<span><b>status</b>: <%= @action.finished ? "finished" : "not finished" %></span><br />
+
+<blockquote>
+<%= @action.description %>
+</blockquote>
+
+<% if @action.finished -%>
+finished at <%= @action.finished_at %>
+<% else -%>
+<%= finish_action(@action) %>
+<% end -%>
+<br />
+
+<%= link_to 'delete', @action, :confirm => 'ya, rly?', :method => :delete %>
+<br/>

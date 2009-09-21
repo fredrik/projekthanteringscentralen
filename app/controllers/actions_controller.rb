@@ -1,5 +1,6 @@
 class ActionsController < ApplicationController
 
+  # DEPRECATED.
   def show
     @action = Action.find(params[:id])
 
@@ -28,7 +29,7 @@ class ActionsController < ApplicationController
       @action.finished_at = Time.now
       @action.save
     end
-    redirect_to :action => 'show'
+    render :partial => 'box'
   end
 
   # DELETE /projects/1

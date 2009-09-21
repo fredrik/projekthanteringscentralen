@@ -6,6 +6,7 @@
 </p>
 
 <%= render :partial => 'actions/list', :locals => {:project => @project} %>
+<div id='show_action' class='no_display'></div>
 <%= render :partial => 'actions/create', :locals => {:project => @project} %>
 
 <%= link_to_function 'add action', "$('attach_action').toggleClassName('pleasehide'); $('attach_action_status').innerHTML='';"  %> |

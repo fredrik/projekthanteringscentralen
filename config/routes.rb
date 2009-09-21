@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :projects
-  map.resources :actions, :member => {:finish => :get}
+  map.resources :actions
+  map.connect 'actions/:id/finish', :controller => 'actions', :action => 'finish'
 
   map.root :controller => 'projects'
 
