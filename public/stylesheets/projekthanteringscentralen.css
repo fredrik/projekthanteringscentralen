@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size:   16px;
+    line-height: 20px;
+    background-color: #fff;
+    color: #000;
+}
+a         { color: #000; }
+a:visited { color: #666; }
+a:hover   { color: #aaa; }
+
+
+a.menu_link, a.menu_link:visited { color: white;}
+
+.pleasehide {
+    visibility: hidden;
+}
+
+.no_display {
+    display: none;
+}
+
+#actions_list_more {
+    margin-top: 10px;
+}
+
+#new_action {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#attach_action_status {
+    color: gray;
+}
+
+#menu {
+    padding: 6px;
+    color: white;
+    background: black;
+}
+
+#portugal {
+    margin: 8px;
+}
